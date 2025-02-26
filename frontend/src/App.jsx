@@ -19,6 +19,11 @@ import TemplateSelection from "./pages/ResumeBuilder/TemplateSelection";
 import PreviewResume from "./pages/ResumeBuilder/PreviewResume";
 import ResumeLanding from "./pages/ResumeLanding";
 import ResumeAnalysis from "./components/resume/ResumeAnalysis";
+import InterviewDashboard from "./components/interviewComponent/InterviewDashboard";
+import Interview from "./components/interviewComponent/Interview";
+import Start from "./components/interviewComponent/Start";
+import { Toaster } from "@/components/ui/sonner"
+import Feedback from "./components/interviewComponent/Feedback";
 
 function App() {
   return (
@@ -54,8 +59,17 @@ function App() {
             <Route path="/resume/templates" element={<TemplateSelection />} />
             <Route path="/resume/preview" element={<PreviewResume />} />
             <Route path="/resume/analysis" element={<ResumeAnalysis />} />
+
+            {/* Interview Routes */}
+            <Route path="/interviewDashboard"  element={<InterviewDashboard />} />
+            <Route path="/interviewDashboard/interview/:id"  element={<Interview />} />
+            <Route path="/interviewDashboard/interview/:id/start"  element={<Start />} />
+            <Route path="/interviewDashboard/interview/:id/feedback"  element={<Feedback />} />
+
           </Route>
         </Routes>
+
+        <Toaster/>
       </Router>
     </>
   );

@@ -51,7 +51,7 @@ const ResumeBuilder = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-blue-600 mb-6">Resume Builder</h1>
+      <h1 className="text-3xl font-bold text-blue-600 mb-6 m-6 text-center">Resume Builder</h1>
 
       <div className="flex justify-center mb-8">
         <div className="flex items-center">

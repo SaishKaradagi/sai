@@ -155,8 +155,8 @@ export default function PreviewResume({ template, resumeData, onBack }) {
   };
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-6">Preview Your Resume</h1>
+    <div className="container mx-auto py-8 max-w-4xl" >
+      <h1 className="text-3xl font-bold mb-6 text-center">Preview Your Resume</h1>
 
       <div className="flex justify-between items-center mb-6">
         <Button

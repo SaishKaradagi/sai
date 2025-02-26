@@ -57,16 +57,16 @@ export default function ResumeEditor({ selectedTemplate }) {
       <h1 className="text-3xl font-bold mb-6">Edit Your Resume</h1>
 
       <div className="flex justify-between items-center mb-6">
-        <Button variant="outline" onClick={() => navigate("/resume/templates")}>
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white"  onClick={() => navigate("/resume/templates")}>
           Back to Templates
         </Button>
-        <Button onClick={handlePreview}>Preview Resume</Button>
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white" onClick={handlePreview}>Preview Resume</Button>
       </div>
 
       <div className="grid grid-cols-3 gap-8">
         <div className="col-span-2 space-y-8">
           {/* Personal Info - Always required */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:border-blue-600 border duration-200">
             <PersonalInfoForm
               formData={resumeData.personalInfo}
               updateFormData={updateFormData}
@@ -74,11 +74,12 @@ export default function ResumeEditor({ selectedTemplate }) {
           </div>
 
           {/* Education Section */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:border-blue-600 border duration-200">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Education</h2>
               <Button
-                variant="ghost"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+                // variant="ghost"
                 onClick={() => handleToggleSection("education")}
               >
                 {activeSections.education ? "Hide Section" : "Show Section"}
@@ -94,11 +95,11 @@ export default function ResumeEditor({ selectedTemplate }) {
           </div>
 
           {/* Experience Section */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:border-blue-600 border duration-200">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Work Experience</h2>
               <Button
-                variant="ghost"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
                 onClick={() => handleToggleSection("experience")}
               >
                 {activeSections.experience ? "Hide Section" : "Show Section"}
@@ -114,11 +115,11 @@ export default function ResumeEditor({ selectedTemplate }) {
           </div>
 
           {/* Skills Section */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:border-blue-600 border duration-200">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Skills</h2>
               <Button
-                variant="ghost"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
                 onClick={() => handleToggleSection("skills")}
               >
                 {activeSections.skills ? "Hide Section" : "Show Section"}
@@ -134,11 +135,11 @@ export default function ResumeEditor({ selectedTemplate }) {
           </div>
 
           {/* Projects Section */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:border-blue-600 border duration-200">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Projects</h2>
               <Button
-                variant="ghost"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
                 onClick={() => handleToggleSection("projects")}
               >
                 {activeSections.projects ? "Hide Section" : "Show Section"}
@@ -154,11 +155,11 @@ export default function ResumeEditor({ selectedTemplate }) {
           </div>
 
           {/* Achievements Section */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-6 rounded-lg shadow hover:border-blue-600 border duration-200">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Achievements</h2>
               <Button
-                variant="ghost"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
                 onClick={() => handleToggleSection("achievements")}
               >
                 {activeSections.achievements ? "Hide Section" : "Show Section"}

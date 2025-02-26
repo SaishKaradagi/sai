@@ -8,7 +8,7 @@ const defaultTemplates = [
     id: 1,
     name: "Professional",
     type: "professional",
-    thumbnail: "/templates/professional-thumb.jpg",
+    thumbnail: "",
   },
   {
     id: 2,
