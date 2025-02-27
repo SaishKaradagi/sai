@@ -30,6 +30,8 @@ import CommunityList from "./components/community/CommunityList";
 import CreateCommunity from "./components/community/CreateCommunity";
 import CommunityDetail from "./components/community/CommunityDetail";
 import MyCommunities from "./components/community/MyCommunities";
+import MentorList from "./components/mentor/MentorList";
+import MentorChat from "./components/mentor/MentorChat";
 
 function App() {
   return (
@@ -59,13 +61,11 @@ function App() {
             <Route path="/AboutPage" element={<AboutPage />} />
             <Route path="/ResumeLanding" element={<ResumeLanding />} />
             <Route path="/ResumeEditor" element={<ResumeEditor />} />
-
             {/* Resume Builder Routes */}
             <Route path="/resume/builder/*" element={<ResumeBuilder />} />
             <Route path="/resume/templates" element={<TemplateSelection />} />
             <Route path="/resume/preview" element={<PreviewResume />} />
             <Route path="/resume/analysis" element={<ResumeAnalysis />} />
-
             {/* Interview Routes */}
             <Route
               path="/interviewDashboard"
@@ -83,12 +83,14 @@ function App() {
               path="/interviewDashboard/interview/:id/feedback"
               element={<Feedback />}
             />
-
             {/* Community Routes */}
             <Route path="/communities" element={<CommunityList />} />
             <Route path="/my-communities" element={<MyCommunities />} />
             <Route path="/community/create" element={<CreateCommunity />} />
             <Route path="/community/:id" element={<CommunityDetail />} />
+            // Add new mentor routes
+            <Route path="/mentors" element={<MentorList />} />
+            <Route path="/mentors/:mentorId" element={<MentorChat />} />
           </Route>
         </Routes>
 

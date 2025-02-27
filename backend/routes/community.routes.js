@@ -4,6 +4,7 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
 import { fileURLToPath } from "url";
+import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 import {
   createCommunity,
   getAllCommunities,
@@ -20,18 +21,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Create uploads directory if it doesn't exist
-const uploadsDir = path.join(__dirname, "..", "uploads");
+const uploadsDir = path.join(__dirname, "../uploads");
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
 // Configure multer for file storage
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, uploadsDir);
-  },
-  filename: function (req, file, cb) {
-    const uniqueFileName = `${uuidv4()}-${file.originalname}`;
+  destination: uploadsDir,
+  filename: (req, file, cb) => {
+    const uniqueFileName = `${uuidv4()}-${file.originalname}`; // Fix syntax
     cb(null, uniqueFileName);
   },
 });
@@ -54,16 +53,7 @@ const upload = multer({
 });
 
 // Middleware to mock authentication (replace with your actual auth)
-const mockAuth = (req, res, next) => {
-  // In a real app, you would get this from your auth middleware or JWT token
-  // For testing, we'll use query parameters or default values
-  req.body.user = {
-    userId: req.query.userId || req.body.userId || "user123",
-    email: req.query.email || req.body.email || "test@example.com",
-    displayName: req.query.displayName || req.body.displayName || "Test User",
-  };
-  next();
-};
+router.post("/", ClerkExpressRequireAuth(), createCommunity);
 
 // Community routes
 router.post("/", mockAuth, createCommunity);

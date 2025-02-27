@@ -1,16 +1,17 @@
-import React from "react";
+// src/components/shared/UserAvatar.jsx
+import { useUser } from "@clerk/clerk-react";
 
-const UserAvatar = ({ email, displayName }) => {
-  const getInitials = (name) =>
-    name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase();
+const UserAvatar = () => {
+  const { user } = useUser();
 
   return (
-    <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-700">
-      {displayName ? getInitials(displayName) : email[0].toUpperCase()}
+    <div className="flex items-center gap-2">
+      <img
+        src={user?.profileImageUrl}
+        className="w-8 h-8 rounded-full"
+        alt={user?.fullName}
+      />
+      <span>{user?.fullName}</span>
     </div>
   );
 };

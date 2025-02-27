@@ -4,6 +4,7 @@ import { io } from "socket.io-client";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Send, FileText, PaperclipIcon } from "lucide-react";
+import { useUser } from "@clerk/clerk-react";
 
 const MessageBubble = ({ message, currentUser }) => {
   const isMine = message.sender.userId === currentUser.userId;
@@ -106,11 +107,11 @@ const CommunityChat = ({ communityId }) => {
   const messagesEndRef = useRef(null);
   const fileInputRef = useRef(null);
 
-  // Mock user for development - replace with actual auth
+  const { user } = useUser();
   const currentUser = {
-    userId: localStorage.getItem("userId") || "user123",
-    email: localStorage.getItem("email") || "user@example.com",
-    displayName: localStorage.getItem("displayName") || "Current User",
+    userId: user?.id,
+    email: user?.primaryEmailAddress?.emailAddress,
+    displayName: user?.fullName,
   };
 
   // Socket.io connection setup

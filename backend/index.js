@@ -14,6 +14,7 @@ import { chatSessionInterview } from "./geminiHelp/aiInterview.js";
 import { v4 as uuidv4 } from "uuid";
 import interviewDetailRouter from "./routes/interviewDet.routes.js";
 import communityRouter from "./routes/community.routes.js"; // Import the new community router
+import mentorRouter from "./routes/mentor.routes.js";
 
 dotenv.config();
 
@@ -167,6 +168,8 @@ app.use("/getRatingFeedback", async (req, res) => {
     res.status(500).send({ error: "Error in giving rating and feedback" });
   }
 });
+
+app.use("/api/mentors", mentorRouter);
 
 // Socket.IO connection handling
 io.on("connection", (socket) => {
