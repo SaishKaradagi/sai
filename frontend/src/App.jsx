@@ -22,8 +22,14 @@ import ResumeAnalysis from "./components/resume/ResumeAnalysis";
 import InterviewDashboard from "./components/interviewComponent/InterviewDashboard";
 import Interview from "./components/interviewComponent/Interview";
 import Start from "./components/interviewComponent/Start";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 import Feedback from "./components/interviewComponent/Feedback";
+
+// Import new Community components
+import CommunityList from "./components/community/CommunityList";
+import CreateCommunity from "./components/community/CreateCommunity";
+import CommunityDetail from "./components/community/CommunityDetail";
+import MyCommunities from "./components/community/MyCommunities";
 
 function App() {
   return (
@@ -61,15 +67,32 @@ function App() {
             <Route path="/resume/analysis" element={<ResumeAnalysis />} />
 
             {/* Interview Routes */}
-            <Route path="/interviewDashboard"  element={<InterviewDashboard />} />
-            <Route path="/interviewDashboard/interview/:id"  element={<Interview />} />
-            <Route path="/interviewDashboard/interview/:id/start"  element={<Start />} />
-            <Route path="/interviewDashboard/interview/:id/feedback"  element={<Feedback />} />
+            <Route
+              path="/interviewDashboard"
+              element={<InterviewDashboard />}
+            />
+            <Route
+              path="/interviewDashboard/interview/:id"
+              element={<Interview />}
+            />
+            <Route
+              path="/interviewDashboard/interview/:id/start"
+              element={<Start />}
+            />
+            <Route
+              path="/interviewDashboard/interview/:id/feedback"
+              element={<Feedback />}
+            />
 
+            {/* Community Routes */}
+            <Route path="/communities" element={<CommunityList />} />
+            <Route path="/my-communities" element={<MyCommunities />} />
+            <Route path="/community/create" element={<CreateCommunity />} />
+            <Route path="/community/:id" element={<CommunityDetail />} />
           </Route>
         </Routes>
 
-        <Toaster/>
+        <Toaster />
       </Router>
     </>
   );
