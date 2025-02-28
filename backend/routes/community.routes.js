@@ -52,17 +52,17 @@ const upload = multer({
   fileFilter: fileFilter,
 });
 
-// Middleware to mock authentication (replace with your actual auth)
+/// Middleware to mock authentication (replace with your actual auth)
 router.post("/", ClerkExpressRequireAuth(), createCommunity);
 
 // Community routes
-router.post("/", mockAuth, createCommunity);
+router.post("/", ClerkExpressRequireAuth(), createCommunity);
+
 router.get("/", getAllCommunities);
 router.get("/:id", getCommunityById);
-router.post("/:id/join", mockAuth, joinCommunity);
-router.post("/:id/leave", mockAuth, leaveCommunity);
+
 router.get("/:id/messages", getCommunityMessages);
-router.post("/:id/upload", mockAuth, upload.single("file"), uploadFile);
+
 router.get("/user/:userId", getUserCommunities);
 
 export default router;

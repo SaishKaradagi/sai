@@ -53,8 +53,8 @@ export default function ResumeEditor({ selectedTemplate }) {
   };
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-6">Edit Your Resume</h1>
+    <div className="container mx-auto px-10">
+      <h1 className="text-3xl font-semibold mb-6 ">Edit Your Resume</h1>
 
       <div className="flex justify-between items-center mb-6">
         <Button className="bg-blue-600 hover:bg-blue-700 text-white"  onClick={() => navigate("/resume/templates")}>

@@ -124,7 +124,7 @@ const CommunityDetail = () => {
   }
 
   return (
-    <div className="container mx-auto py-4">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 m-4">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         {/* Community Header */}
         <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 text-white">
@@ -157,7 +157,7 @@ const CommunityDetail = () => {
                 <Button
                   onClick={handleLeave}
                   variant="outline"
-                  className="border-white text-white hover:bg-blue-700"
+                  className="hover:border-white text-white bg-blue-700"
                 >
                   <LogOut size={18} className="mr-2" />
                   {isAdmin ? "Leave (Admin)" : "Leave Community"}

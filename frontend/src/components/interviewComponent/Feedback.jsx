@@ -62,8 +62,8 @@ const Feedback = () => {
             Here is your Interview feedback
           </h2>
           <h2 className="text-xl font-semibold">
-            Yor overall feedback rating{" "}
-            <strong className="text-red-400">{rating}/10</strong>
+            Your overall feedback rating{" "}
+            <strong className="text-red-400">{rating}/10 </strong>feedback for {feedbackList.length} Question
           </h2>
         </div>
   
@@ -85,7 +85,7 @@ const Feedback = () => {
                       <strong className="text-red-500">Rating: {feedback.rating} </strong>
                   </h2>
                   <h2 className=" bg-red-100 p-1 rounded-lg text-red-900">
-                      <strong>Your answer: </strong>{feedback.userAns}
+                      <strong>Your answer: </strong>{feedback.userAns} 
                   </h2>
                   <h2 className=" bg-green-100 p-1 rounded-lg text-green-900">
                       <strong>Correct answer: </strong>{feedback.correctAns}

@@ -43,7 +43,7 @@ const ResumeLanding = () => {
           </div>
           <div className="lg:w-1/2">
             <img
-              src="/resume-pic.avif"
+              src="resumeLanding.jpg"
               alt="Resume Preview"
               className="w-full shadow-2xl rounded-lg border border-slate-200"
               onError={(e) => {

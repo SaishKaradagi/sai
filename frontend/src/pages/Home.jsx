@@ -53,7 +53,7 @@ const Home = () => {
             <div className="flex-1 relative">
               <div className="relative z-10 bg-white rounded-xl shadow-xl p-4 md:p-8">
                 <img
-                  src="https://cdn.vectorstock.com/i/2000v/08/79/online-video-call-remote-communication-vector-42610879.avif"
+                  src="landImg.jpg"
                   alt="Career guidance dashboard preview"
                   className="rounded-lg w-full h-80 object-cover "
                 />

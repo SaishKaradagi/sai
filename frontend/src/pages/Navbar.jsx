@@ -30,11 +30,6 @@ const Navbar = () => {
       href: "/ResumeLanding", // Updated to match the new route
     },
     {
-      name: "About",
-      icon: <Info className="h-4 w-4 mr-2" />,
-      href: "/AboutPage",
-    },
-    {
       name: "Communities",
       icon: <Info className="h-4 w-4 mr-2" />,
       href: "/communities",
@@ -43,6 +38,11 @@ const Navbar = () => {
       name: "My Communities",
       icon: <Info className="h-4 w-4 mr-2" />,
       href: "/my-communities",
+    },
+    {
+      name: "About",
+      icon: <Info className="h-4 w-4 mr-2" />,
+      href: "/AboutPage",
     },
   ];
 
@@ -64,7 +64,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center gap-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}

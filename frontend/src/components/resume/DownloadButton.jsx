@@ -54,7 +54,7 @@ export default function DownloadButton({ resumeRef }) {
   };
 
   return (
-    <Button onClick={downloadPDF} className="flex items-center gap-2">
+    <Button onClick={downloadPDF} className="flex items-center gap-2 hover:cursor-pointer bg-blue-600 hover:bg-blue-700">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

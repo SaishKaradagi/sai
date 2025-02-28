@@ -156,19 +156,20 @@ export default function PreviewResume({ template, resumeData, onBack }) {
 
   return (
     <div className="container mx-auto py-8 max-w-4xl" >
-      <h1 className="text-3xl font-bold mb-6 text-center">Preview Your Resume</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">Preview Your Resume</h1>
 
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex p-5 justify-between items-center mb-6">
         <Button
+        className="hover:cursor-pointer bg-blue-600 hover:bg-blue-700 text-white hover:text-white"
           variant="outline"
-          onClick={onBack || (() => navigate("/resume/editor"))}
+          onClick={onBack || (() => navigate("/resume/builder/*"))}
         >
           Back to Editor
         </Button>
         <DownloadButton resumeRef={resumeRef} />
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg p-4 max-w-4xl mx-auto">
+      <div className="bg-white shadow-xl border hover:border-blue-600  rounded-lg p-4 max-w-4xl mx-auto">
         <div
           ref={resumeRef}
           className="bg-white w-full aspect-[8.5/11] overflow-hidden"

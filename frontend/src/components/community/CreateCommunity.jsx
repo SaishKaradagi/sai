@@ -54,8 +54,8 @@ const CreateCommunity = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-2xl py-8">
-      <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="container mx-auto max-w-2xl py-8 border m-5 rounded-lg shadow-md hover:border-blue-500">
+      <div className="bg-white rounded-lg  p-6">
         <h1 className="text-2xl font-bold mb-6">Create a New Community</h1>
 
         {error && (
