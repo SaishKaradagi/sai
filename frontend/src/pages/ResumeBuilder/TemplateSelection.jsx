@@ -8,26 +8,20 @@ const defaultTemplates = [
     id: 1,
     name: "Professional",
     type: "professional",
-    thumbnail: "",
+    thumbnail: "/professional.png",
   },
   {
     id: 2,
     name: "Creative",
     type: "creative",
-    thumbnail: "/templates/creative-thumb.jpg",
+    thumbnail: "/creative.jpg",
   },
   {
     id: 3,
     name: "Modern",
     type: "modern",
-    thumbnail: "/templates/modern-thumb.jpg",
-  },
-  {
-    id: 4,
-    name: "Simple",
-    type: "simple",
-    thumbnail: "/templates/simple-thumb.jpg",
-  },
+    thumbnail: "/modern.jpg",
+  }
 ];
 
 const TemplateSelection = ({ onSelectTemplate, onUploadTemplate }) => {

@@ -69,10 +69,10 @@ const CommunityList = () => {
   }
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
       <div className="flex justify-between mb-6">
-        <h1 className="text-3xl font-bold">Career Communities</h1>
-        <Button onClick={() => navigate("/community/create")}>
+        <h1 className="text-3xl font-semibold">Career Communities</h1>
+        <Button className="hover:cursor-pointer bg-blue-600 hover:bg-blue-700" onClick={() => navigate("/community/create")}>
           Create Community
         </Button>
       </div>
@@ -119,10 +119,11 @@ const CommunityList = () => {
                   <Button
                     onClick={() => navigate(`/community/${community._id}`)}
                     variant="outline"
+                    className="border hover:border-blue-500"
                   >
                     View
                   </Button>
-                  <Button onClick={() => handleJoinCommunity(community._id)}>
+                  <Button className="hover:cursor-pointer duration-300 bg-slate-300 text-black hover:text-white hover:bg-blue-700" onClick={() => handleJoinCommunity(community._id)}>
                     Join Community
                   </Button>
                 </div>

@@ -126,7 +126,7 @@ const AboutPage = () => {
           to information overload and lack of structured guidance.
         </p>
         <p className="text-lg text-gray-700 mb-6 max-w-4xl mx-auto">
-          Founded in 2023 by a team of educators, technologists, and career
+          Founded in 2024 by a team of educators, technologists, and career
           development experts, we set out to create a tool that combines the
           power of AI with human expertise to provide clear, actionable roadmaps
           for professional growth.

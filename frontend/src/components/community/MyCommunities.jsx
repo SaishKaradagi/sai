@@ -53,15 +53,15 @@ const MyCommunities = () => {
   }
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
       <div className="flex justify-between mb-6">
-        <h1 className="text-3xl font-bold">My Communities</h1>
+        <h1 className="text-3xl font-semibold ">My Communities</h1>
         <div className="space-x-3">
           <Button onClick={() => navigate("/communities")} variant="outline">
             <Users size={18} className="mr-2" />
             Browse Communities
           </Button>
-          <Button onClick={() => navigate("/community/create")}>
+          <Button className="hover:cursor-pointer bg-blue-600 hover:bg-blue-700" onClick={() => navigate("/community/create")}>
             Create Community
           </Button>
         </div>
@@ -124,7 +124,7 @@ const MyCommunities = () => {
                     )}
                     <Button
                       onClick={() => navigate(`/community/${community._id}`)}
-                      className="ml-auto"
+                      className="ml-auto hover:cursor-pointer duration-300 bg-slate-300 text-black hover:text-white hover:bg-blue-700"
                     >
                       <MessageSquare size={18} className="mr-2" />
                       Open Chat
